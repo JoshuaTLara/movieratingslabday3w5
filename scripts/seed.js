@@ -1,5 +1,6 @@
 import { Movie, Rating, User, db } from '../src/model.js';
 import movieData from './data/movies.json' assert { type: 'json' };
+import lodash from 'lodash'
 
 console.log('Syncing database...');
 await db.sync({ force: true });
@@ -50,6 +51,8 @@ const ratingsInDB = await Promise.all(
     return movieRatings;
   }),
 );
+
+
 
 console.log(ratingsInDB);
 

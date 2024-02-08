@@ -41,7 +41,7 @@ export class Movie extends Model {
 
 Movie.init(
   {
-    MovieId: {
+    movieId: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
@@ -51,7 +51,7 @@ Movie.init(
       allowNull: false,
     },
     overview: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     releaseDate: {
       type: DataTypes.DATE,
